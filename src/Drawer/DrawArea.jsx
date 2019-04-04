@@ -67,7 +67,9 @@ export default class DrawArea extends React.Component {
      });
    }
 
+
    render() {
+     console.log(this.state)
      return (
        <div
          className="drawArea"
@@ -75,7 +77,7 @@ export default class DrawArea extends React.Component {
          onMouseDown={this.handleMouseDown}
          onMouseMove={this.handleMouseMove}
        >
-         <Drawing lines={this.state.lines} />
+         <Drawing lines={this.state} />
        </div>
      );
    }

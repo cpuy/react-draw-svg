@@ -1,6 +1,7 @@
 import React from 'react';
 import DrawingPath from './DrawingPath';
 import DrawingLine from './DrawingLine';
+import tools from './tools';
 
 /**
  * abstract the SVG logic away
@@ -8,11 +9,16 @@ import DrawingLine from './DrawingLine';
  *  for every line, render the individual lines using DrawingLine
  */
 function Drawing({ lines }) {
+
   return (
     <svg className="drawing">
-      {lines.map((line, index) => (
-        <DrawingLine key={index} line={line} />
-      ))}
+      {
+        Object.keys(tools).flatMap(name => {
+        const Renderer = tools[name].drawingComponent;
+        return lines[tools[name].stateSelector].map((line, index) => (
+          <Renderer key={index} line={line}/>
+        ))})
+      }
     </svg>
   );
 }
