@@ -73,3 +73,7 @@
   border: 1px solid chartreuse;
   cursor: pointer;
 }
+
+.ToolBox > .setected {
+  background-color: chartreuse;
+}
