@@ -3,10 +3,14 @@ import DrawArea from './DrawArea';
 import ToolBox from './ToolBox';
 
 class Drawer extends Component {
+  handleToolSelect(name){
+    console.log(name)
+  }
+
   render() {
     return (
       <>
-        <ToolBox />
+        <ToolBox onSelect={this.handleToolSelect}/>
         <DrawArea />
       </>
     );
