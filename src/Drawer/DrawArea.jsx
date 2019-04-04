@@ -38,7 +38,7 @@ export default class DrawArea extends React.Component {
      const point = this.relativeCoordinatesForEvent(mouseEvent);
 
      this.setState(prevState => ({
-       lines: prevState.lines.push(new Immutable.List([point])),
+       [this.props.tool.stateSelector]: prevState[this.props.tool.stateSelector].push(new Immutable.List([point])),
        isDrawing: true
      }));
    }
@@ -51,7 +51,7 @@ export default class DrawArea extends React.Component {
      const point = this.relativeCoordinatesForEvent(mouseEvent);
 
      this.setState(prevState =>  ({
-       lines: prevState.lines.updateIn([prevState.lines.size - 1], line => line.push(point))
+       [this.props.tool.stateSelector]: prevState[this.props.tool.stateSelector].updateIn([prevState[this.props.tool.stateSelector].size - 1], line => line.push(point))
      }));
    }
 

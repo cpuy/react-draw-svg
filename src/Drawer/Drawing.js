@@ -1,6 +1,4 @@
 import React from 'react';
-import DrawingPath from './DrawingPath';
-import DrawingLine from './DrawingLine';
 import tools from './tools';
 
 /**
