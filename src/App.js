@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import DrawArea from './draw/DrawArea';
+import Drawer from './Drawer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <DrawArea />
+        <Drawer />
       </div>
     );
   }

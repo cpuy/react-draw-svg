@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DrawingLine({ line }) {
+function DrawingPath({ line }) {
   const pathData = "M " +
     line
       .map(p => {
@@ -11,4 +11,4 @@ function DrawingLine({ line }) {
   return <path className="path" d={pathData} />;
 }
 
-export default DrawingLine;
+export default DrawingPath;
