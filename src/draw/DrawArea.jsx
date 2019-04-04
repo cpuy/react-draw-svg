@@ -2,7 +2,9 @@ import React from 'react';
 import Immutable from 'immutable';
 import Drawing from './Drawing';
 
-
+/**
+ * Its main purpose is to handle mouse events
+ */
 export default class DrawArea extends React.Component {
    constructor() {
      super();
