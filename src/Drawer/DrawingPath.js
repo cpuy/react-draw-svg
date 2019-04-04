@@ -8,7 +8,11 @@ function DrawingPath({ line }) {
       })
       .join(" L ");
 
-  return <path className="path" d={pathData} />;
+  return <path
+    className="path"
+    d={pathData}
+    strokeWidth={3}
+  />;
 }
 
 export default DrawingPath;
