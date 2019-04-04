@@ -1,6 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
 import Drawing from './Drawing';
+import tools from './tools';
 
 /**
  * Its main purpose is to handle mouse events
@@ -10,9 +11,11 @@ export default class DrawArea extends React.Component {
      super();
 
      this.state = {
-       lines: new Immutable.List(),
        isDrawing: false
      };
+
+     // init a list for each tools
+     Object.keys(tools).forEach((name) => this.state[tools[name].stateSelector] = new Immutable.List());
 
      this.handleMouseDown = this.handleMouseDown.bind(this);
      this.handleMouseMove = this.handleMouseMove.bind(this);

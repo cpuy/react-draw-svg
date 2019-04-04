@@ -3,11 +3,11 @@ import DrawingLine from './DrawingLine';
 
 export default {
   stylo: {
-    stateSelector: 'path',
+    stateSelector: 'paths',
     drawingComponent: DrawingPath
   },
   line: {
-    stateSelector: 'line',
+    stateSelector: 'lines',
     drawingComponent: DrawingLine
   }
 };
