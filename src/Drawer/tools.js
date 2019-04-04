@@ -1,5 +1,5 @@
-import DrawingPath from './DrawingPath';
-import DrawingLine from './DrawingLine';
+import DrawingPath from './path/DrawingPath';
+import DrawingLine from './stylo/DrawingLine';
 
 export default {
   stylo: {
