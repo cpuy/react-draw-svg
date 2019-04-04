@@ -28,7 +28,7 @@ export default class DrawArea extends React.Component {
    }
 
    handleMouseDown(mouseEvent) {
-     if (mouseEvent.button != 0) {
+     if (mouseEvent.button !== 0) {
        return;
      }
 
